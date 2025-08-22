@@ -1,4 +1,4 @@
-package com.sky.config;
+package com.sky.aspect.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

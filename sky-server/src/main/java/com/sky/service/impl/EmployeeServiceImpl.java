@@ -91,11 +91,36 @@ public class EmployeeServiceImpl implements EmployeeService {
         Long currentId = BaseContext.getCurrentId();
 
         //设置当前记录创建人id和修改人id
-        employee.setCreateUser(currentId);//目前写个假数据，后期修改
+        employee.setCreateUser(currentId);
         employee.setUpdateUser(currentId);
 
         employeeMapper.insert(employee);//后续步骤定义
     }
+
+    /**
+     * 新增员工
+     * @param employeeDTO
+     */
+    public void save2(EmployeeDTO employeeDTO){
+        Employee employee=new Employee();
+
+        BeanUtils.copyProperties(employeeDTO,employee);
+
+        employee.setStatus(StatusConstant.ENABLE);
+
+        employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
+
+        employee.setCreateTime(LocalDateTime.now());
+        employee.setUpdateTime(LocalDateTime.now());
+
+        employee.setCreateUser(10L);//目前写个假数据，后期修改
+        employee.setUpdateUser(10L);
+
+        employeeMapper.insert(employee);
+
+
+    }
+
 
     /**
      * 员工分页查询

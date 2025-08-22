@@ -1,4 +1,4 @@
-package com.sky.config;
+package com.sky.aspect.config;
 
 import com.sky.properties.AliOssProperties;
 import com.sky.utils.AliOssUtil;

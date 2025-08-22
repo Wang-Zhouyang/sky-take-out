@@ -1,4 +1,4 @@
-package com.sky.config;
+package com.sky.aspect.config;
 
 import com.sky.interceptor.JwtTokenAdminInterceptor;
 import com.sky.interceptor.JwtTokenUserInterceptor;

@@ -1,4 +1,4 @@
-package com.sky.config;
+package com.sky.aspect.config;
 
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import lombok.extern.slf4j.Slf4j;
